@@ -328,6 +328,13 @@ true
 449 496 450 287 1
 [FinGraficoTransicion]
 [VariablesConstantes]
+1
+[Version VariYConst]
+0
+VNextCtrl
+Pr_Time
+
+Variable
 0
 [Metodos]
 9
@@ -417,12 +424,14 @@ FInitFlightPlan()
 0
 1
 
-5
+7
 	 
 	//Timing Service useful methods
-	 
-	//time.GetTime(); // Get current monotonic time
-	//time.Add(X,Y); // Add X sec + Y microsec
+
+time.GetTime(); // Get current monotonic time
+time+=Pr_Time(0,100000); // Add X sec + Y microsec
+VNextCtrl=time;
+pus_service129_init_flight_plan();
 [ServiceRequest]
 InformAt
 DroneTimer
@@ -440,9 +449,9 @@ FProgNextCtrl()
 5
 	 
 	//Timing Service useful methods
-	 
-	//time.GetTime(); // Get current monotonic time
-	//time.Add(X,Y); // Add X sec + Y microsec
+
+VNextCtrl+= Pr_Time(0,100000); // Add X sec + Y microsec
+time=VNextCtrl;
 [ServiceRequest]
 InformAt
 DroneTimer
