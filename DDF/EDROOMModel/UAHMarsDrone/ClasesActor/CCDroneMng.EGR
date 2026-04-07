@@ -5,8 +5,8 @@
 0
 0
 [Modificado]
-0
-0
+1
+1
 0
 [Estructura]
 [Version Estructura]
@@ -266,14 +266,14 @@ true
 0
 127 100 216 146 0
 [FinGraficoTransicion]
- 
+ Transition
 SelfTest
 OSubEst
 Ready
 DSubEst
 ;
 [Trigger]
-DroneMngCtrl 
+*
 SDroneSetUp
 true
  
@@ -281,8 +281,8 @@ true
  
 FGetConfig();
 ;
-FReplyDroneReady();
-1
+
+0
 ;
 [GraficoTransicion]
 [Version GraficoTransicion]

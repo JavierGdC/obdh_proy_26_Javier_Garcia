@@ -204,7 +204,7 @@ public:
 
 		//!Transition Identifiers
 		enum TEDROOMTransitionID{Init,
-			 ,
+			 Transition,
 			ExecTC,
 			ExecTC_InitFlightPlan,
 			ExecTC_WaitFP,
