@@ -404,7 +404,7 @@ FGetConfig()
 pus_service129_setup(varSDroneSetUp);
 [ServiceRequest]
 Msg->data
-DroneMngCtrl 
+DroneMngCtrl
 SDroneSetUp
 CDDroneConfig
 EDROOMprioVeryHigh

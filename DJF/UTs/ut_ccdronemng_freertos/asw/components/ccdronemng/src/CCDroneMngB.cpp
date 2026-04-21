@@ -234,6 +234,8 @@ void CCDroneMng::EDROOM_SUB_Top_0::EDROOMBehaviour()
 			case ( Transition):
 				//Msg->Data Handling 
 				FGetConfig();
+				//Reply Synchronous Message 
+				FReplyDroneReady();
 				//Next State is Ready
 				edroomNextState = Ready;
 				break;
