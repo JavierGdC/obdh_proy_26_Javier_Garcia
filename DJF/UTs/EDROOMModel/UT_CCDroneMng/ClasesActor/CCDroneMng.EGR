@@ -170,9 +170,9 @@ true
 Ready
 DSubEst
 ;
+
  
- 
- 
+
 ;
 ;
 ;
@@ -187,9 +187,9 @@ GExecFlightPlan()
 FlightPlan
 DSubEst
 FInitFlightPlan();
+
  
- 
- 
+
 ;
 ;
 ;
@@ -281,7 +281,7 @@ true
  
 FGetConfig();
 ;
-
+FReplyDroneReady();
 1
 ;
 [GraficoTransicion]
@@ -462,7 +462,7 @@ FReplyDroneReady()
 pus_service129_drone_ready();
 [ServiceRequest]
 Msg->reply
-DroneMngCtrl 
+DroneMngCtrl
 SDroneReady
 NULL
 EDROOMprioVeryHigh
