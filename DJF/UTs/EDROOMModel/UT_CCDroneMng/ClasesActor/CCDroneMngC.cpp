@@ -399,7 +399,9 @@ TEDROOMTransId CCDroneMng::EDROOM_SUB_Top_0::EDROOMSelfTestArrival()
 
 			case (SDroneSetUp): 
 
-				 {
+				 if (*Msg->GetPInterface() == DroneMngCtrl)
+				{
+
 					//Next transition is   Transition
 					edroomCurrentTrans.localId=  Transition;
 					edroomCurrentTrans.distanceToContext = 0;
@@ -449,7 +451,7 @@ TEDROOMTransId CCDroneMng::EDROOM_SUB_Top_0::EDROOMReadyArrival()
 
 			case (SDroneTC): 
 
-				 if (*Msg->GetPInterface() == DroneMngCtrl )
+				 if (*Msg->GetPInterface() == DroneMngCtrl)
 				{
 
 					//Next transition is  ExecTC

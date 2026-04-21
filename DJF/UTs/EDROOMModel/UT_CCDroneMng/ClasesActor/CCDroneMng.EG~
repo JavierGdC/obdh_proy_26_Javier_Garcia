@@ -5,8 +5,8 @@
 0
 0
 [Modificado]
-0
-0
+1
+1
 0
 [Estructura]
 [Version Estructura]
@@ -273,7 +273,7 @@ Ready
 DSubEst
 ;
 [Trigger]
-*
+DroneMngCtrl
 SDroneSetUp
 true
  
@@ -281,8 +281,8 @@ true
  
 FGetConfig();
 ;
- 
-0
+
+1
 ;
 [GraficoTransicion]
 [Version GraficoTransicion]
@@ -296,7 +296,7 @@ ExecTC
 DPEleccion
 ;
 [Trigger]
-DroneMngCtrl 
+DroneMngCtrl
 SDroneTC
 true
  
