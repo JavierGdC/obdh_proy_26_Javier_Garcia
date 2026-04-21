@@ -5,8 +5,8 @@
 0
 0
 [Modificado]
-0
-0
+1
+1
 3
 [Estructura]
 [Version Estructura]
@@ -47,10 +47,10 @@ EDROOMprioNormal
  
 [Version Grafico Actor Componente]
 0
-32.2266
-55.4415
-56.0547
-79.4661
+48.6328
+34.0862
+66.2109
+56.6735
 CCDroneMng
 [FinActoresComponente]
 [Uniones]

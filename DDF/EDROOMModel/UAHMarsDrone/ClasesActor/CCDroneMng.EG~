@@ -273,7 +273,7 @@ Ready
 DSubEst
 ;
 [Trigger]
-*
+DroneMngCtrl
 SDroneSetUp
 true
  
@@ -281,8 +281,8 @@ true
  
 FGetConfig();
 ;
-
-0
+FReplyDroneReady();
+1
 ;
 [GraficoTransicion]
 [Version GraficoTransicion]
@@ -296,7 +296,7 @@ ExecTC
 DPEleccion
 ;
 [Trigger]
-DroneMngCtrl 
+DroneMngCtrl
 SDroneTC
 true
  
@@ -404,7 +404,7 @@ FGetConfig()
 pus_service129_setup(varSDroneSetUp);
 [ServiceRequest]
 Msg->data
-DroneMngCtrl 
+DroneMngCtrl
 SDroneSetUp
 CDDroneConfig
 EDROOMprioVeryHigh
@@ -462,7 +462,7 @@ FReplyDroneReady()
 pus_service129_drone_ready();
 [ServiceRequest]
 Msg->reply
-DroneMngCtrl 
+DroneMngCtrl
 SDroneReady
 NULL
 EDROOMprioVeryHigh

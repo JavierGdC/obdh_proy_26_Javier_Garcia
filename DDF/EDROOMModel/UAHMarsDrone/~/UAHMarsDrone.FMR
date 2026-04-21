@@ -19,9 +19,9 @@ UAHMarsDrone
 [CurrentTarget]
 0
 [MESP Directory]
-z:\home\atcsol\OBDH_2026-workspace\uah_mars_drone_freertos_hito1\asw
+C:\Users\javie\OneDrive\Documentos\git\obdh_proy_26_Javier_Garcia\DDF\uah_mars_drone_freertos_hito1\asw
 [MESP main Directory]
-z:\home\atcsol\OBDH_2026-workspace\uah_mars_drone_freertos_hito1
+C:\Users\javie\OneDrive\Documentos\git\obdh_proy_26_Javier_Garcia\DDF\uah_mars_drone_freertos_hito1
 [MESP main prototype]
 int main (void)
 [MESP main return]
@@ -93,7 +93,7 @@ Timer
 [Version]
 1
 DroneMng
-42823848
+42374752
 10
 EDROOMprioNormal
  
@@ -106,7 +106,7 @@ UAHMarsDrone
 1
 EvTimerDroneTimer
 Timer
-1145396294
+0
 1
 0
 0
