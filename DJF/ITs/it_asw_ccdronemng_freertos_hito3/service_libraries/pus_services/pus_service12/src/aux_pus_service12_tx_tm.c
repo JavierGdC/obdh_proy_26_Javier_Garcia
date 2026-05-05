@@ -33,7 +33,7 @@ error_code_t pus_service12_tx_TM_12_12(uint16_t trans_counter) {
 
 	error_code_t error = 0;
 
-	//ToDo AA??_DONE maximum transition reporting delay
+	//ToDo AA_DONE maximum transition reporting delay
 	if (trans_counter <= PUS_SERVICE12_MAX_NUM_OF_TRANS) {
 
 		tm_handler_t tm_handler;

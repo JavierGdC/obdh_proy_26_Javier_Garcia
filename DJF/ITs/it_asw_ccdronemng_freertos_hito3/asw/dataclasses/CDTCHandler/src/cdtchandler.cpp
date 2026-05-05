@@ -48,9 +48,9 @@ void CDTCHandler::MngTCAcceptation() {
 
 }
 
-//TODO 12 Part 1 TC[129,1], TC[129,2], TC[129,3] & TC[129,4] must be accepted
+//TODO 12 DONE Part 1 TC[129,1], TC[129,2], TC[129,3] & TC[129,4] must be accepted
 
-//TODO 12 Part 2 Complete ExecCtrl
+//TODO 12 DONE Part 2 Complete ExecCtrl
 
 CDTCExecCtrl CDTCHandler::GetExecCtrl() {
 
@@ -77,6 +77,10 @@ CDTCExecCtrl CDTCHandler::GetExecCtrl() {
 		execCtrl.mExecCtrl = ExecCtrlBKGTC;
 		break;
 
+	case (129):
+		execCtrl.mExecCtrl = ExecCtrlDroneTC;
+		break;
+
 
 	default:
 
@@ -88,7 +92,7 @@ CDTCExecCtrl CDTCHandler::GetExecCtrl() {
 	return execCtrl;
 }
 //**************************************************************************
-//TODO 13 Complete Exec_Type_TC according to defined ExecCtrl
+//TODO 13 DONE Complete Exec_Type_TC according to defined ExecCtrl
 //**************************************************************************
 
 void CDTCHandler::ExecPrioTC() {
@@ -160,9 +164,9 @@ void CDTCHandler::ExecHK_FDIRTC() {
 		case (3):
 			pus_service3_exec_tc(&mTCHandler);
 			break;
-		case (4):
-			pus_service4_exec_tc(&mTCHandler);
-			break;
+		//case (4):
+		//	pus_service4_exec_tc(&mTCHandler);
+		//	break;
 		case (5):
 			pus_service5_exec_tc(&mTCHandler);
 			break;
@@ -226,7 +230,9 @@ void CDTCHandler::ExecDroneTC() {
 
 		switch (type) {
 
-
+		case (129):
+			pus_service129_exec_tc(&mTCHandler);
+			break;
 
 		default:
 			//No defined code for this TC. Design error
