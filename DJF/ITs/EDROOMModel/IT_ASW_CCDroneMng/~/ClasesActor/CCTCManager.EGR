@@ -56,7 +56,7 @@ BKGExecCtrl
 CPBKGExecCtrl
 [Version Puerto]
 0
-DroneMngCtrl 
+DroneMngCtrl
 1
 1
 0
@@ -84,12 +84,17 @@ CPDroneMngCtrl
 3
 0
 [Pools]
-1
+2
 [Version PoolDatosMens]
 0
 EDROOMPoolCDTCHandler
 CDTCHandler
 10
+[Version PoolDatosMens]
+0
+EDROOMPoolCDDroneConfig
+CDDroneConfig
+2
 [Modulos]
 2
 [Version Modulo]
@@ -237,7 +242,7 @@ FMngTCRejection();
 HandleTC
 0
 [Ramas]
-4
+5
 [Version Ramas]
 5
 ToReboot
@@ -307,6 +312,23 @@ FFwdBKGTC();
 [Version GraficoRama]
 0
 545 351 322 332 3
+[FinGraficoRama]
+FwdDroneTC
+GFwdDroneTC()
+Ready
+DSubEst
+;
+ 
+ 
+ 
+;
+FFwdDroneTC();
+;
+;
+[GraficoRama]
+[Version GraficoRama]
+0
+553 351 322 379 2
 [FinGraficoRama]
 [Transiciones]
 4
@@ -428,7 +450,7 @@ CDTCExecCtrl
 Variable
 0
 [Metodos]
-15
+17
 [Version Metodos]
 21
 BasicAction
@@ -468,6 +490,25 @@ FFwdBKGTC()
 send
 BKGExecCtrl
 SBKGTC
+CDTCHandler
+EDROOMprioNormal
+SendMsg
+FFwdDroneTC()
+0
+0
+0
+0
+1
+ 
+4
+	
+		// Complete Data 
+	
+	*pSDroneTC_Data=VCurrentTC;
+[ServiceRequest]
+send
+DroneMngCtrl 
+SDroneTC
 CDTCHandler
 EDROOMprioNormal
 SendMsg
@@ -612,6 +653,16 @@ GFwdBKGTC()
 return VTCExecCtrl.IsBKGTC();
  
 Guard
+GFwdDroneTC()
+0
+0
+0
+0
+1
+ 
+1
+return VTCExecCtrl.IsDroneTC();
+Guard
 GFwdToHK_FDIR()
 0
 0
@@ -654,7 +705,7 @@ Standby
 [ObjetoGrafico]
 [Version Objeto Grafico]
 0
-196 235 90 60
+190 254 90 60
 [FinObjetoGrafico]
 [PuntosEleccion]
 0
@@ -664,7 +715,7 @@ Standby
 1
 [Version Transicion]
 5
-TC_Mng_Start
+Ready_to_Standby
 Init
 OPEntrada
 Standby
@@ -679,20 +730,42 @@ true
  
 ;
 ;
-;
+FInvokeDroneSetUp();
 0
 ;
 [GraficoTransicion]
 [Version GraficoTransicion]
 0
-45 142 196 262 0
+48 138 190 267 0
 [FinGraficoTransicion]
 [VariablesConstantes]
 0
 [Metodos]
-0
+1
 [Version Metodos]
 21
+InvokeMsg
+FInvokeDroneSetUp()
+0
+0
+0
+0
+1
+ 
+7
+	
+		// Complete Data 
+	
+pSDroneSetUp_Data->ZMinBeforeAdvance=10;
+pSDroneSetUp_Data->DefaultKp=0.2;
+pSDroneSetUp_Data->DefaultKi=0.15;
+pSDroneSetUp_Data->DefaultKd=0.05;
+[ServiceRequest]
+invoke
+DroneMngCtrl 
+SDroneSetUp
+CDDroneConfig
+EDROOMprioVeryHigh
 [MaquinasSubEstados]
 0
 [FinMaquinasSubEstados]

@@ -6,7 +6,7 @@
 [Nombre Modelo]
 UAH_ASW
 [Modificado]
-0
+1
 [Opciones Modelo]
 [Version Opciones Modelo]
 4
@@ -19,13 +19,13 @@ UAH_ASW
 [CurrentTarget]
 0
 [MESP Directory]
-C:\Users\javie\OneDrive\Documentos\git\OBDH_JavierGarciadelCaz\prac7\asw_pus_rtems_5_0_leon3_st19_st2\asw
+C:\Users\javie\OneDrive\Documentos\git\obdh_proy_26_Javier_Garcia\DJF\ITs\it_asw_ccdronemng_freertos_hito3\asw
 [MESP main Directory]
-C:\Users\javie\OneDrive\Documentos\git\OBDH_JavierGarciadelCaz\prac7\asw_pus_rtems_5_0_leon3_st19_st2
+C:\Users\javie\OneDrive\Documentos\git\obdh_proy_26_Javier_Garcia\DJF\ITs\it_asw_ccdronemng_freertos_hito3
 [MESP main prototype]
-extern "C" rtems_task Init (uint32_t arg)
+int main (void)
 [MESP main return]
-;
+return 0;
 [Dyn Priority]
 0
 [Main Cmp Priority]
@@ -95,7 +95,7 @@ Timer
 TCManager
 2
 10
-EDROOMprioHigh
+EDROOMprioNormal
  
 CCTCManager
 UAH_ASW
