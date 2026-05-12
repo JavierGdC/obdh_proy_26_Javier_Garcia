@@ -170,9 +170,9 @@ true
 Ready
 DSubEst
 ;
-
  
-
+ 
+ 
 ;
 ;
 ;
@@ -187,9 +187,9 @@ GExecFlightPlan()
 FlightPlan
 DSubEst
 FInitFlightPlan();
-
  
-
+ 
+ 
 ;
 ;
 ;
@@ -401,7 +401,7 @@ Msg->data
 DroneMngCtrl
 SDroneTC
 CDTCHandler
-
+ 
 BasicAction
 FFlightCtrlAlgorithm()
 0
