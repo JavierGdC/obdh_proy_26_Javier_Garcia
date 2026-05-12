@@ -170,9 +170,9 @@ true
 Ready
 DSubEst
 ;
+
  
- 
- 
+
 ;
 ;
 ;
@@ -187,9 +187,9 @@ GExecFlightPlan()
 FlightPlan
 DSubEst
 FInitFlightPlan();
+
  
- 
- 
+
 ;
 ;
 ;
@@ -240,7 +240,7 @@ FToReady();
 436 280 316 279 3
 [FinGraficoRama]
 [Transiciones]
-4
+5
 [Version Transicion]
 5
 Init
@@ -335,6 +335,29 @@ true
 0
 449 496 450 287 1
 [FinGraficoTransicion]
+ExecTCInFlight
+FlightPlan
+OSubEst
+FlightPlan
+DSubEst
+;
+[Trigger]
+DroneMngCtrl
+SDroneTC
+true
+ 
+ 
+ 
+FExecDroneTC();
+;
+;
+0
+;
+[GraficoTransicion]
+[Version GraficoTransicion]
+0
+469 578 299 578 5
+[FinGraficoTransicion]
 [VariablesConstantes]
 1
 [Version VariYConst]
@@ -375,10 +398,10 @@ varSDroneTC.ExecDroneTC();
  
 [ServiceRequest]
 Msg->data
-DroneMngCtrl 
+DroneMngCtrl
 SDroneTC
 CDTCHandler
-EDROOMprioVeryHigh
+
 BasicAction
 FFlightCtrlAlgorithm()
 0
