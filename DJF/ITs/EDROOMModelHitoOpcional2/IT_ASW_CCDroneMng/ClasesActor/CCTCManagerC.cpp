@@ -832,6 +832,8 @@ TEDROOMTransId CCTCManager::EDROOM_SUB_Ready_1::Arrival(
 					break;
 
 				case (NoRxTC):
+				//Msg->Data Handling 
+				FGetTC();
 					//Go to the state InFlight
 					edroomNextState = InFlight;
 					edroomContextExit=0;
